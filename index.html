@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">	
+	<link rel="stylesheet" type="text/css" href="bootstrap.css">
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<link rel="stylesheet" type="text/css" href="font-awesome/css/font-awesome.css">
+	<script type="text/javascript" src="jquery.js"></script>
+	<script type="text/javascript" src="bootstrap.js"></script>
+	<script type="text/javascript" src="script.js"></script>
+</head>
+<body>
+	<div class="row w-100 m-0">		
+		<div id="navbar" class="p-0 col-lg-3 col-md-5 col-sm-12 bg-dark">			
+			<div class="position-relative bg-info py-3 mobile-menu">
+				<div class="position-absolute py-1 px-2 border text-white menu-btn-pos menu-btn">menu</div>
+				<h5 class="text-center text-white">Vlab</h5>
+			</div>
+			<div class="bg-light px-4 position-relative">
+				<div class="d-flex flex-wrap">
+					<span class="fw5 font fs-3 fa fa-chevron-left mx-2 text-secondary1"></span>
+					<h3 class="fs-3 fw6 text-info text-center py-3 mb-0">Vlab Docs</h3>
+					<span class="fw5 font fs-3 fa fa-chevron-right mx-2 text-secondary1"></span>					
+				</div>
+				<center>
+					<input class="input-round form-control w-75">
+				</center>
+				<div class="mb-2" style="height: 20px;"></div>
+			</div>
+			<div class="nav-cover">				
+				<h4 class="fs-1 fw4 text-info px-5 py-3">USER GUIDE</h4>
+				<div class="nav-dropdown px-5">
+					<ul>
+						<li class="nav-menu">
+							<i class="fa fa-caret-right text-white mr-2"></i>
+							<a href="#concept">Getting Started</a>
+							<ul class="sub-nav">
+								<li class="nav-icon" onclick="setT('Getting Started','Concepts')"><i class=" fs-01 fa  fa-circle mr-2"></i><a href="#concept">Concepts</a></li>
+								<li class="nav-icon" onclick="setT('Getting Started','Installation')"><i class=" fs-01 fa fa-circle  mr-2"></i><a href="#quickstart">Installation</a></li>
+							</ul>
+						</li>
+						<li class="nav-menu">
+							<i class="fa fa-caret-right text-white mr-2"></i><a href="#concept">FAQ</a>
+							<ul class="sub-nav">
+								<!-- <li class="nav-icon"><i class=" fs-01 fa  fa-circle mr-2"></i><a href="#concept">Concepts</a></li>
+								<li class="nav-icon"><i class=" fs-01 fa fa-circle  mr-2"></i><a href="#quickstart">Installation</a></li> -->
+							</ul>
+						</li>
+						
+					</ul>
+				</div>
+			</div>
+		</div>
+		<!-- nav ba end -->
+	<!-- content start-->
+		<div class="col-lg-6 col-md-7 col-sm-12 px-5" style="background: #fcfffc; overflow-y: scroll;height: 100vh;">
+			<div class="pt-3 d-flex" style="justify-content: space-between;">
+				<div>
+					<i class="fa fa-home"></i>
+					<span class="fa fa-angle-double-right"></span>				
+					<span class="stage1">Getting Started</span>
+					<span class="fa fa-angle-double-right"></span>					
+					<span class="stage2"></span>
+
+				</div>
+				<div>
+					<a href="https://github.com/saidabdul80/vlab-2"><i class="fa fa-github"></i> Github</a>
+				</div>
+			</div>
+			<hr>
+			<br>
+			<div data-spy="scroll" data-target="#navbar-example2" data-offset="0">
+				 <h4 id="concept">Concepts</h4>
+				 	<h4>What is Vlab</h4>
+				 	<p class="text-justify fs-015">
+				Vlab is a platform that intends to enable equitable virtual access, tools and near-real life 
+				experience of conducting basic science and engineering based experiments that have otherwise become difficult to be carried out by ALL first year or second-year science and engineering students in the laboratory within the semester period. This project is currently supported by the Royal Academy of Engineering under the Higher Education Partnerships in sub-Saharan Africa scheme (HEP-2021-129)
+
+Vlab will be standing on the shoulder of technology giants such as Laravel, Vue js and Bootstrap for development.</p>
+				 <h4 id="quickstart">Installation</h4>
+				  <ol class="fs-01">	
+				  	<li>clone the latest stable release of Vlabnigeria repository. From the command line:
+				  		<pre>git clone https://github.com/saidabdul80/vlab-2.git vlab</pre>
+				  	</li>
+				  	<li>Enter your newly cloned project directory using 
+				  		<pre>cd vlab</pre>
+				  	</li>
+				  	<li>Create a file named .env file and copy the contents of the .env.example into the new .env 	
+				  		file or alternatively rename the .env.example file to .env
+				  	</li>
+				  	<li>
+				  		create database vlab
+				  	</li>
+				  	<li>
+				  		edit this to yours in .env
+				  		<pre>
+DB_DATABASE= your_database_name
+DB_USERNAME= your_username
+DB_PASSWORD= *********</pre>
+				  	</li>
+				  	<li>
+				  		From terminal/command prompt on vlab directory Run 
+				  		<pre>composer install</pre>
+				  		then
+				  		<pre>php artisan key:generate</pre>
+				  	</li>				  	
+				  	<li>
+				  		From terminal/command prompt on vlab directory Run 
+				  		<pre>php artisan migrate:fresh --seed</pre>				  		
+				  	</li>				  	
+				  	<li>Run
+				  		<pre>yarn install && yarn watch</pre> or 
+				  		<pre>npm install && npm run watch</pre> to install the frontend dependencies.
+				  	</li>
+				  	<li>
+				  		locate <pre>resources/js/plugin.js</pre> edit line 2 to <pre>axios.defaults.baseURL = " your host address " </pre>				  		
+				  	</li>
+				  	<li>
+				  		From terminal/command prompt on vlab directory Run 
+				  		<pre>npm run prod</pre>
+				  	</li>
+				  	<li>if you are on cpanel change root directory of your domain or subdomain to public in vlab directroy otherwise</li>
+				  	<li>if you are on local host run
+				  		<pre>php artisan serve</pre>
+				  	</li>				  	
+				  </ol>
+				  <h5>Thank you for installing vlab</h5>
+				  <h4 id="faq">@mdo</h4>
+				  <p>...</p>
+			</div>
+		</div>
+	<!-- content end-->
+		<div class="col-lg-3 bg-light">
+
+		</div>
+	</div>
+</body>
+</html>
