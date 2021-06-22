@@ -7,9 +7,12 @@
 	<link rel="stylesheet" type="text/css" href="bootstrap.css">
 	<link rel="stylesheet" type="text/css" href="style.css">
 	<link rel="stylesheet" type="text/css" href="font-awesome/css/font-awesome.css">
+	<link rel="stylesheet" type="text/css" href="VenoBox-master/venobox/venobox.css">
 	<script type="text/javascript" src="jquery.js"></script>
 	<script type="text/javascript" src="bootstrap.js"></script>
 	<script type="text/javascript" src="script.js"></script>
+
+	<script type="text/javascript" src="VenoBox-master/venobox/venobox.js"></script>
 </head>
 <body>
 	<div class="row w-100 m-0">		
@@ -83,12 +86,14 @@ Vlab will be standing on the shoulder of technology giants such as Laravel, Vue 
 				  <ol class="fs-01">	
 				  	<li>clone the latest stable release of Vlabnigeria repository. From the command line:
 				  		<pre>git clone https://github.com/saidabdul80/vlab-2.git vlab</pre>
+				  		<img src="vids/1.gif" width="100%">					  		
 				  	</li>
 				  	<li>Enter your newly cloned project directory using 
 				  		<pre>cd vlab</pre>
 				  	</li>
 				  	<li>Create a file named .env file and copy the contents of the .env.example into the new .env 	
 				  		file or alternatively rename the .env.example file to .env
+				  		<img src="vids/2.gif" width="100%">	
 				  	</li>
 				  	<li>
 				  		create database vlab
@@ -99,27 +104,42 @@ Vlab will be standing on the shoulder of technology giants such as Laravel, Vue 
 DB_DATABASE= your_database_name
 DB_USERNAME= your_username
 DB_PASSWORD= *********</pre>
+							
+						<br><br>			  		
 				  	</li>
 				  	<li>
 				  		From terminal/command prompt on vlab directory Run 
 				  		<pre>composer install</pre>
+				  		<br>
+				  		<img src="vids/3.gif" width="100%">	<br><br>
 				  		then
 				  		<pre>php artisan key:generate</pre>
+				  			
+				  		<img src="vids/4.gif" width="100%">		
+				  		<br><br>			  						  		
 				  	</li>				  	
 				  	<li>
 				  		From terminal/command prompt on vlab directory Run 
 				  		<pre>php artisan migrate:fresh --seed</pre>				  		
+				  		<img src="vids/5.gif" width="100%">		
+				  		<br><br>			  		
 				  	</li>				  	
 				  	<li>Run
 				  		<pre>yarn install && yarn watch</pre> or 
 				  		<pre>npm install && npm run watch</pre> to install the frontend dependencies.
+				  		<img src="vids/6.gif" width="100%">	
+				  		<br><br>				  		
 				  	</li>
 				  	<li>
 				  		locate <pre>resources/js/plugin.js</pre> edit line 2 to <pre>axios.defaults.baseURL = " your host address " </pre>				  		
+				  		<img src="vids/7.gif" width="100%">					  		
+				  		<br><br>
 				  	</li>
 				  	<li>
 				  		From terminal/command prompt on vlab directory Run 
-				  		<pre>npm run prod</pre>
+				  		<pre>npm run prod</pre><br>
+				  		<img src="vids/8.gif" width="100%">					  		
+				  		<br><br>
 				  	</li>
 				  	<li>if you are on cpanel change root directory of your domain or subdomain to public in vlab directroy otherwise</li>
 				  	<li>if you are on local host run
