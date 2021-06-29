@@ -99,12 +99,11 @@ Vlab will be standing on the shoulder of technology giants such as Laravel, Vue 
 				  		create database vlab
 				  	</li>
 				  	<li>
-				  		edit this to yours in .env
-				  		<pre>
+				  		edit this to yours in .env, Note: please fill the neccessary data to all lines with ********* in the .env file
+				  		<!-- <pre>
 DB_DATABASE= your_database_name
 DB_USERNAME= your_username
-DB_PASSWORD= *********</pre>
-							
+DB_PASSWORD= *********</pre> -->							
 						<br><br>			  		
 				  	</li>
 				  	<li>
@@ -125,22 +124,11 @@ DB_PASSWORD= *********</pre>
 				  		<br><br>			  		
 				  	</li>				  	
 				  	<li>Run
-				  		<pre>yarn install && yarn watch</pre> or 
-				  		<pre>npm install && npm run watch</pre> to install the frontend dependencies.
+				  		<pre>yarn install</pre> or 
+				  		<pre>npm install</pre> to install the frontend dependencies.
 				  		<img src="vids/6.gif" width="100%">	
 				  		<br><br>				  		
-				  	</li>
-				  	<li>
-				  		locate <pre>resources/js/plugin.js</pre> edit line 2 to <pre>axios.defaults.baseURL = " your host address " </pre>				  		
-				  		<img src="vids/7.gif" width="100%">					  		
-				  		<br><br>
-				  	</li>
-				  	<li>
-				  		From terminal/command prompt on vlab directory Run 
-				  		<pre>npm run prod</pre><br>
-				  		<img src="vids/8.gif" width="100%">					  		
-				  		<br><br>
-				  	</li>
+				  	</li>				  	
 				  	<li>if you are on cpanel change root directory of your domain or subdomain to public in vlab directroy otherwise</li>
 				  	<li>if you are on local host run
 				  		<pre>php artisan serve</pre>
